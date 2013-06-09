@@ -1,10 +1,10 @@
 (load-file "template.clj")
 (refer 'template)
 
-(def *letter*
+(def ^:dynamic *letter*
 "Dear <%= winner %>,
   We are pleased to inform you that you have been nominated as
-president of this years <%= club %> club.  Great job!  You will 
+president of this years <%= club %> club.  Great job!  You will
 soon receive a set of important items:
 
 <% (doseq [doc documents] -%>
@@ -15,11 +15,11 @@ Thanks for all your hard work.
 Sincerely,
 <%= from %>")
 
-(def *page*
+(def ^:dynamic *page*
 "<h3>Dear <%= winner %>,<h3>
 <p>
 We are pleased to inform you that you have been nominated as
-president of this years <%= club %> club.  Great job!  You will 
+president of this years <%= club %> club.  Great job!  You will
 soon receive a set of important items:
 </p>
 
@@ -36,10 +36,10 @@ Sincerely,
 </p>")
 
 
-(def winner nil)
-(def club nil)
-(def documents nil)
-(def from nil)
+(def ^:dynamic winner nil)
+(def ^:dynamic club nil)
+(def ^:dynamic documents nil)
+(def ^:dynamic from nil)
 
 (let [letter (template *letter*)
       page (template *page*)]
