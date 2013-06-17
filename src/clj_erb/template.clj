@@ -15,8 +15,9 @@
 ;; new function which when called instantiates the template and outputs a
 ;; string with the embedded code evaluated under the current bindings.
 
-(ns template
+(ns clj-erb.template
   (:import (java.util Scanner)))
+
 
 (defn- scanner
   "Returns a hash of functions closing over a java Scanner object.

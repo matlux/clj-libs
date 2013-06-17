@@ -1,5 +1,6 @@
-(load-file "template.clj")
-(refer 'template)
+(ns clj-erb.example-templates
+  (:use clj-erb.template))
+
 
 (def ^:dynamic *letter*
 "Dear <%= winner %>,
